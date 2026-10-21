@@ -1,10 +1,11 @@
-# Coverage matrix (V0)
+# Coverage matrix (V0.1.1)
 
-| Area | V0 | Notes |
-|------|----|-------|
+| Area | V0.1.1 | Notes |
+|------|--------|-------|
 | Firm stubs (URL + product_line) | 10 | See `firms/` |
-| FAQ topics | 18 | Short answers; PFD for depth |
-| Open-page Rule Card | yes | Runtime only |
+| FAQ topics | 21 | Short HOW-TO-VERIFY answers; PFD for depth |
+| Open-page Rule Card | yes | Runtime only; diligence path + failure template |
+| Required-attempt fields | yes | VPN/VPS, hedging, penalties, sessions, fees + existing |
 | Affiliate template | example only | No live codes |
 | Tier / scoring methodology | stub | V0.1 |
 | Compare table generator | deferred | V0.1 |

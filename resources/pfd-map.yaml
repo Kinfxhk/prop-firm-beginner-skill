@@ -78,3 +78,15 @@ tax_kyc_overview:
 should_i_buy:
   url: null
   note: fill when PFD slug known
+
+vpn_vps_login:
+  url: null
+  note: fill when PFD slug known
+
+hedging:
+  url: null
+  note: fill when PFD slug known
+
+commissions_spreads:
+  url: null
+  note: fill when PFD slug known

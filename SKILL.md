@@ -6,14 +6,14 @@ description: >
   Chinese deep-dives to propfirmsdrama.com. Use when the user asks which prop
   firm to pick, what drawdown/consistency means, payout timing, or how to verify
   a promo. Not investment advice. Never teach geo/KYC bypass or guarantee a pass.
-version: 0.1.0
+version: 0.1.1
 ---
 
-# Prop Firm Beginner Skill (V0)
+# Prop Firm Beginner Skill (V0.1.1)
 
 ## Hard rules
 
-1. **Open-page verify (FAIL if missing).** For any price, rule, payout, geo limit, or promo: open the official page (homepage / Help / TOS / checkout; official X only for promo deadlines). Record **`url`**, **`opened_at`** (ISO-8601, Asia/Hong_Kong), and **`saw`** (what you observed). If you did not open the page → output **`未能核實`**. Never treat memory, forums, Trustpilot, Discord, or affiliate emails as the rule source of truth.
+1. **Diligent open-page verify (FAIL if lazy).** For any price, rule, payout, geo limit, fee, session, hedging, VPN/VPS, penalty, or promo: walk the **minimum diligence path** (as applicable): homepage → Help/FAQ search → TOS/rules PDF → checkout/pricing → official status page / official X (**promo deadlines only**). Record **`url`**, **`opened_at`** (ISO-8601, Asia/Hong_Kong), and **`saw`**. **Not opening / not trying enough ≠ instant「未能核實」.** Only after exhausting applicable paths: list `methods_tried` + URLs + `opened_at`, then conclude **`以上來源未見公開資料`**. Never emit bare「未能核實」without that evidence. Never invent numbers. Never treat memory, forums, Trustpilot, Discord, or affiliate emails as the rule source of truth.
 2. **Not investment advice.** Prop products typically use **simulated capital** and involve **challenge / subscription fee risk**. Say so on Rule Cards and CTAs. No trading signals. No “guaranteed pass”.
 3. **No impersonation.** Do not speak as a firm’s support. Do not embed firm logos as Skill branding. Firm names are descriptive citations only (see NOTICE).
 4. **No geo / KYC bypass.** Explain that restrictions exist; link official Help/TOS. Never teach how to circumvent region or identity checks.
@@ -32,12 +32,38 @@ version: 0.1.0
 - Bundling locked rule numbers that go stale
 - An executable verify script (V0 has none; verify is the agent's manual open-page procedure)
 
+## Diligence verify procedure
+
+When asked `verify firm <name> [topic]` (or when filling a Rule Card):
+
+1. Prefer official firm homepage → search Help/FAQ for the topic keywords.
+2. Open TOS / rules PDF / trading rules page if linked.
+3. Open checkout / pricing / platform-fee pages for money fields.
+4. For promo **deadlines only**, official status page or official X may supplement — still record url/opened_at/saw.
+5. Fill the field with `status: verified` only when `saw` supports the value.
+6. If still unknown after the applicable path → use the **failure output template** below. Do **not** invent. Do **not** bare-label「未能核實」.
+
+### Failure output template (when official sources lack the fact)
+
+```text
+### Failure output template (when official sources lack the fact)
+- topic: …
+- methods_tried: [homepage | help_search | tos_pdf | checkout | official_x]
+- urls_opened:
+  - url: …
+    opened_at: …
+    saw: …
+- conclusion: 以上來源未見公開資料
+```
+
+`methods_tried` lists only paths that apply and were attempted. `official_x` is for promo deadlines only.
+
 ## Workflow
 
 1. **Questionnaire** — product line (futures / CFD / forex — do not mix tables), location (esp. HK / restricted), budget, account size preference, platform (NT / Tradovate / Rithmic / MT5 / …), goal (challenge vs instant funded), payout cadence, EA/news preference → optional `profile.yaml` summary.
 2. **Shortlist** — match `firms/*.yaml` stubs by `product_lines` + geo/platform hints from **verified** pages; mark `geo_ok` / `platform_ok` / `payout_method_ok` / `active_pending` only after open-page checks (or leave pending).
-3. **Rule Card** — one firm × one product line; every cell per schema below.
-4. **Verify** — procedure: `verify firm <name> [topic]` → homepage → Help → TOS → checkout (and official X only for promo deadlines). Missing source → delete claim or mark `未能核實`.
+3. **Rule Card** — one firm × one product line; every **required-attempt** field below must be tried (verified, pending mid-check, or failure-template).
+4. **Verify** — diligence path above. Missing source after trying applicable methods → failure template (`以上來源未見公開資料`), never invent, never bare「未能核實」.
 5. **Optional PFD** — if user wants Chinese explainers / case studies / payout stories, add links from `resources/pfd-map.yaml` (do not copy article bodies). If a URL is `null`, say the PFD link is not configured; never invent one.
 6. **CTA** — if affiliate link used: disclosure sentence every time; rules still “以官網為準”.
 
@@ -48,13 +74,32 @@ Every row:
 | field | value | url | opened_at | saw | status |
 |-------|-------|-----|-----------|-----|--------|
 
-- `status`: `verified` | `未能核實` | `pending`
+- `status`: `verified` | `pending` | or use **failure template** when official sources lack the fact (do not use bare「未能核實」without `methods_tried` + urls)
 - `opened_at`: Asia/Hong_Kong ISO-8601 when the page was opened
-- Typical fields (fill only what you verified): challenge steps, profit target, daily loss, max DD / trailing, consistency, news / overnight, min trading days, reset price, activation, profit split %, payout cycle / min payout, prohibited behaviour, alleged hidden rules (label **alleged** + non-authority source, or omit)
+- Empty `value` only with failure-template evidence **or** `pending` mid-check
+
+### Required-attempt fields (every firm × product-line)
+
+Attempt all of these (plus existing money/risk fields). Status = `verified` | `pending` | failure-template when not found:
+
+| key | meaning |
+|-----|---------|
+| `drawdown` / max DD / trailing | existing |
+| `daily_loss` | existing |
+| `consistency` / min trading days | existing |
+| `payout` / profit split | existing |
+| `geo` / region limits | existing |
+| `vpn_vps_multi_location_login` | VPN / VPS / multi-location login limits |
+| `hedging` | hedging / opposite positions / multi-account hedge |
+| `penalties` | violation consequences (disable, confiscate profits, void account — **official wording only**) |
+| `trading_sessions` | sessions / overnight / weekend / news trading |
+| `commissions_spreads_fees` | commission / spread / platform fees |
+
+Also fill when verified: challenge steps, profit target, reset price, activation, prohibited behaviour, alleged hidden rules (label **alleged** + non-authority source, or omit).
 
 ## FAQ routing
 
-Use `faq/index.yaml` + `faq/*.md` for short answers. Point “詳見 PFD” to `resources/pfd-map.yaml` topic keys. Never lock numbers into FAQ bodies.
+Use `faq/index.yaml` + `faq/*.md` for short answers (HOW to verify; never lock numbers). Point “詳見 PFD” to `resources/pfd-map.yaml` topic keys.
 
 ## Affiliates
 
