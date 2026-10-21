@@ -2,7 +2,7 @@
 
 **本說明以繁體中文為準。** English follows below.
 
-**狀態：V0 腳手架（0.1.7）** — 開源 Agent Skill，協助新手**選擇 prop firm**、以**即時開頁核實**查閱規則、回答 FAQ，並可選擇連至 [Propfirms Drama](https://propfirmsdrama.com/) 閱讀繁中長文。**非投資建議。** 與任何 proprietary trading firm 無隸屬關係。
+**狀態：V0 腳手架（0.1.8）** — 開源 Agent Skill，協助新手**選擇 prop firm**、以**即時開頁核實**查閱規則、回答 FAQ，並可選擇連至 [Propfirms Drama](https://propfirmsdrama.com/) 閱讀繁中長文。**非投資建議。** 與任何 proprietary trading firm 無隸屬關係。
 
 > 如果你的 AI 根本無法解答正確的 Prop firm 資訊，這個可能幫到你。
 
@@ -49,7 +49,7 @@
 - Live／成本 FAQ（22／23）只教查法；不鎖定出金次數門檻，不教爆倉流。
 - `resources/pfd-map.yaml` 是模板；`null` 代表未設定，不要發明 PFD URL。
 - `firms/*.yaml` 只存 URL 與 product line，不存費用、回撤、利潤目標或出金日數。
-- FAQ 以香港用語書寫；SKILL.md 為英文。若你要對外發佈，請自行調整語氣及披露。
+- FAQ 以繁體書面語書寫；SKILL.md 為英文。若你要對外發佈，請自行調整語氣及披露。
 
 ## 聯盟／優惠總入口（Linktree）
 
@@ -77,7 +77,7 @@ MIT — 見 [LICENSE](./LICENSE) 及 [NOTICE](./NOTICE)。
 
 **The Traditional Chinese section above is authoritative.** English is a parallel summary.
 
-**Status: V0 scaffold (0.1.7)** — Open-source Agent Skill to help beginners **choose a prop firm**, read rules via **open-page verification**, answer FAQ, and optionally bridge to [Propfirms Drama](https://propfirmsdrama.com/) for Chinese deep-dives. **Not investment advice.** Not affiliated with any proprietary trading firm.
+**Status: V0 scaffold (0.1.8)** — Open-source Agent Skill to help beginners **choose a prop firm**, read rules via **open-page verification**, answer FAQ, and optionally bridge to [Propfirms Drama](https://propfirmsdrama.com/) for Chinese deep-dives. **Not investment advice.** Not affiliated with any proprietary trading firm.
 
 > If your AI can't get prop-firm facts right, this may help.
 
@@ -86,7 +86,7 @@ MIT — 見 [LICENSE](./LICENSE) 及 [NOTICE](./NOTICE)。
 A Cursor / Claude / Hermes-compatible [`SKILL.md`](./SKILL.md) plus:
 
 - Firm **URL stubs** (`firms/`) — no locked fees or drawdown numbers
-- 23-topic FAQ short answers (`faq/`) — HOW to verify; numbers only at runtime
+- 23-topic FAQ short answers (`faq/`) — Traditional Chinese **書面語** (written style); HOW to verify; numbers only at runtime. `SKILL.md` remains English.
 - PFD topic → URL template (`resources/pfd-map.yaml`)
 - Affiliate **example** template (`affiliates.example.yaml`) with mandatory disclosure pattern
 

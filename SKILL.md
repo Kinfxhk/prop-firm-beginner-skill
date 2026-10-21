@@ -7,10 +7,10 @@ description: >
   firm to pick, what drawdown/consistency means, payout timing, or how to verify
   a promo. Not investment advice. Not a solicitation to buy any firm. Never teach
   geo/KYC bypass or guarantee a pass.
-version: 0.1.4
+version: 0.1.8
 ---
 
-# Prop Firm Beginner Skill (V0.1.4)
+# Prop Firm Beginner Skill (V0.1.8)
 
 ## Hard rules
 

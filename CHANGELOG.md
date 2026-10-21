@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.8 — Language policy: SKILL=EN; FAQ/README ZH=書面語
+
+- FAQ（`faq/*.md`）：粵語口語改香港繁體**書面語**；意思不變；仍只教查法、不鎖定數字
+- README：語言政策改「FAQ 以繁體書面語書寫；SKILL.md 為英文」；EN 段同步；狀態 **0.1.8**
+- SKILL.md：保持英文硬規則；frontmatter／標題版本 → **0.1.8**（中文 failure 模板句可留）
+
 ## 0.1.7 — README 開首口號（繁中＋英文）
 
 - README：狀態行附近加口號（唔硬推單一 firm、唔改免責）
