@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.7 — README 開首口號（繁中＋英文）
+
+- README：狀態行附近加口號（唔硬推單一 firm、唔改免責）
+  - 繁中：「如果你的 AI 根本無法解答正確的 Prop firm 資訊，這個可能幫到你。」
+  - EN: "If your AI can't get prop-firm facts right, this may help."
+
 ## 0.1.6 — README：Linktree 與 FUNDING 拆兩行（避免 GitHub 渲染黏連）
 
 - README（繁中＋英文）：第一行只寫 Linktree；第二行另起 GitHub Sponsors／FUNDING 連結（唔用 `_…_` 包住）

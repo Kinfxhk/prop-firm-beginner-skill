@@ -2,7 +2,9 @@
 
 **本說明以繁體中文為準。** English follows below.
 
-**狀態：V0 腳手架（0.1.6）** — 開源 Agent Skill，協助新手**選擇 prop firm**、以**即時開頁核實**查閱規則、回答 FAQ，並可選擇連至 [Propfirms Drama](https://propfirmsdrama.com/) 閱讀繁中長文。**非投資建議。** 與任何 proprietary trading firm 無隸屬關係。
+**狀態：V0 腳手架（0.1.7）** — 開源 Agent Skill，協助新手**選擇 prop firm**、以**即時開頁核實**查閱規則、回答 FAQ，並可選擇連至 [Propfirms Drama](https://propfirmsdrama.com/) 閱讀繁中長文。**非投資建議。** 與任何 proprietary trading firm 無隸屬關係。
+
+> 如果你的 AI 根本無法解答正確的 Prop firm 資訊，這個可能幫到你。
 
 [English](#english)
 
@@ -75,7 +77,9 @@ MIT — 見 [LICENSE](./LICENSE) 及 [NOTICE](./NOTICE)。
 
 **The Traditional Chinese section above is authoritative.** English is a parallel summary.
 
-**Status: V0 scaffold (0.1.6)** — Open-source Agent Skill to help beginners **choose a prop firm**, read rules via **open-page verification**, answer FAQ, and optionally bridge to [Propfirms Drama](https://propfirmsdrama.com/) for Chinese deep-dives. **Not investment advice.** Not affiliated with any proprietary trading firm.
+**Status: V0 scaffold (0.1.7)** — Open-source Agent Skill to help beginners **choose a prop firm**, read rules via **open-page verification**, answer FAQ, and optionally bridge to [Propfirms Drama](https://propfirmsdrama.com/) for Chinese deep-dives. **Not investment advice.** Not affiliated with any proprietary trading firm.
+
+> If your AI can't get prop-firm facts right, this may help.
 
 ### What this is
 
