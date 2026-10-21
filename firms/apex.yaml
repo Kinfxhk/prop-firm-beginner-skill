@@ -9,4 +9,3 @@ urls:
   pricing: https://apextraderfunding.com/
 pricing_url_pending: true
 notes: stub — resolve Help/TOS/pricing paths at runtime; no rule numbers here
-homepage_check: failed

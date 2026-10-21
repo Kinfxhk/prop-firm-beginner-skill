@@ -6,6 +6,7 @@ description: >
   Chinese deep-dives to propfirmsdrama.com. Use when the user asks which prop
   firm to pick, what drawdown/consistency means, payout timing, or how to verify
   a promo. Not investment advice. Never teach geo/KYC bypass or guarantee a pass.
+version: 0.1.0
 ---
 
 # Prop Firm Beginner Skill (V0)
@@ -16,10 +17,12 @@ description: >
 2. **Not investment advice.** Prop products typically use **simulated capital** and involve **challenge / subscription fee risk**. Say so on Rule Cards and CTAs. No trading signals. No “guaranteed pass”.
 3. **No impersonation.** Do not speak as a firm’s support. Do not embed firm logos as Skill branding. Firm names are descriptive citations only (see NOTICE).
 4. **No geo / KYC bypass.** Explain that restrictions exist; link official Help/TOS. Never teach how to circumvent region or identity checks.
-5. **Trustpilot / forums = 对照 only.** Useful for risk colour; never for Rule Card numeric fields.
+5. **Trustpilot / forums = 對照 only.** Useful for risk colour; never for Rule Card numeric fields.
 6. **Affiliates.** Every CTA that uses a tracking link must include disclosure (from `affiliates.example.yaml` pattern or local override). Never hardcode secret / unpublished codes in this repo. Operators supply their own compliant codes.
 7. **Two layers.** Fact layer = official pages. Interpretation layer = PFD / education links via `resources/pfd-map.yaml` (`resource: pfd`). Do not paste full PFD articles into the repo.
 8. **Honest stubs.** `firms/*.yaml` hold URLs + `product_lines` only. Never invent fees, DD, targets, or payout days into YAML.
+9. **PFD map nulls.** If `resources/pfd-map.yaml` has `url: null`, say the PFD link is not configured. Never invent a URL or paste an article body.
+10. **Stubs are not recommendations.** `firms/*.yaml` are URL starting points; never rank or recommend a firm from the stub list alone.
 
 ## Out of scope (explicit)
 
@@ -27,14 +30,15 @@ description: >
 - Trading signals or “guaranteed challenge pass”
 - Teaching geo / KYC / payment bypass
 - Bundling locked rule numbers that go stale
+- An executable verify script (V0 has none; verify is the agent's manual open-page procedure)
 
 ## Workflow
 
 1. **Questionnaire** — product line (futures / CFD / forex — do not mix tables), location (esp. HK / restricted), budget, account size preference, platform (NT / Tradovate / Rithmic / MT5 / …), goal (challenge vs instant funded), payout cadence, EA/news preference → optional `profile.yaml` summary.
 2. **Shortlist** — match `firms/*.yaml` stubs by `product_lines` + geo/platform hints from **verified** pages; mark `geo_ok` / `platform_ok` / `payout_method_ok` / `active_pending` only after open-page checks (or leave pending).
 3. **Rule Card** — one firm × one product line; every cell per schema below.
-4. **Verify** — command pattern: `verify firm <name> [topic]` → homepage → Help → TOS → checkout (and official X only for promo deadlines). Missing source → delete claim or mark `未能核實`.
-5. **Optional PFD** — if user wants Chinese explainers / case studies / payout stories, add links from `resources/pfd-map.yaml` (do not copy article bodies).
+4. **Verify** — procedure: `verify firm <name> [topic]` → homepage → Help → TOS → checkout (and official X only for promo deadlines). Missing source → delete claim or mark `未能核實`.
+5. **Optional PFD** — if user wants Chinese explainers / case studies / payout stories, add links from `resources/pfd-map.yaml` (do not copy article bodies). If a URL is `null`, say the PFD link is not configured; never invent one.
 6. **CTA** — if affiliate link used: disclosure sentence every time; rules still “以官網為準”.
 
 ## Rule Card output schema

@@ -12,7 +12,7 @@
 
 - 公司 **URL stub**（`firms/`）— **不鎖定**挑戰費、回撤等數字
 - 18 題 FAQ 短答（`faq/`）
-- PFD 主題 → URL 對照（`resources/pfd-map.yaml`）
+- PFD 主題 → URL 對照**模板**（`resources/pfd-map.yaml`；V0 多數留空，由使用者自行填入）
 - 聯盟連結 **範例**模板（`affiliates.example.yaml`）— 強制披露句式
 
 ## 硬規則（Agent 必須遵守）
@@ -30,6 +30,20 @@
 1. Clone 或複製本 repo 至 agent skills 目錄（或直接指向 `SKILL.md`）。
 2. （可選）複製 `affiliates.example.yaml` → `affiliates.yaml`，填入**你自己的**連結／碼（請勿 commit）。
 3. 例如詢問：「我想在香港做期貨 prop，預算有限，請協助短名單並核實規則。」
+
+常見 skills 目錄（實際路徑視 agent 版本而定）：
+
+- Hermes：`~/.hermes/profiles/<profile>/skills/`
+- 共享 skills（DeepSeek Harness／OpenCode 等）：`~/.agents/skills/`
+- Claude Code：`~/.claude/skills/`
+- Cursor：專案的 `.cursor/skills/` 或你設定的全域 skills 目錄
+
+## V0 限制
+
+- 10 個公司 URL stub、18 題 FAQ；**沒有自動 verify script**，`verify` 是 agent 的開頁程序，不是可執行指令。
+- `resources/pfd-map.yaml` 是模板；`null` 代表未設定，不要發明 PFD URL。
+- `firms/*.yaml` 只存 URL 與 product line，不存費用、回撤、利潤目標或出金日數。
+- FAQ 以香港用語書寫；SKILL.md 為英文。若你要對外發佈，請自行調整語氣及披露。
 
 ## 贊助（Buy Me a Coffee）
 
