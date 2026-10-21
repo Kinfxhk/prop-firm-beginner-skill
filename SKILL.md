@@ -6,10 +6,10 @@ description: >
   Chinese deep-dives to propfirmsdrama.com. Use when the user asks which prop
   firm to pick, what drawdown/consistency means, payout timing, or how to verify
   a promo. Not investment advice. Never teach geo/KYC bypass or guarantee a pass.
-version: 0.1.2
+version: 0.1.3
 ---
 
-# Prop Firm Beginner Skill (V0.1.2)
+# Prop Firm Beginner Skill (V0.1.3)
 
 ## Hard rules
 
@@ -34,6 +34,9 @@ version: 0.1.2
 - WordPress / site ops / auto-publishing to any live site
 - Trading signals or “guaranteed challenge pass”
 - Teaching geo / KYC / payment bypass
+- Trading strategy / ICT / SMC / entry systems (not this Skill)
+- Backtest tooling or strategy validation workflows (not this Skill)
+- Teaching 爆倉流／blowup farming／guaranteed-pass farming
 - Bundling locked rule numbers that go stale
 - An executable verify script (V0 has none; verify is the agent's manual open-page procedure)
 
@@ -100,12 +103,13 @@ Attempt all of these (plus existing money/risk fields). Status = `verified` | `p
 | `penalties` | violation consequences (disable, confiscate profits, void account — **official wording only**) |
 | `trading_sessions` | sessions / overnight / weekend / news trading |
 | `commissions_spreads_fees` | commission / spread / platform fees |
+| `live_funded_transition` | Live Funded / sim-to-live transition (payout thresholds, Live eligibility — **official wording only**; diligence + failure template; never lock numbers) |
 
 Applicability and payout answers must cite the premise「以用戶所報居住地＝X 為前提」. Also fill when verified: challenge steps, profit target, reset price, activation, prohibited behaviour, alleged hidden rules (label **alleged** + non-authority source, or omit).
 
 ## FAQ routing
 
-Use `faq/index.yaml` + `faq/*.md` for short answers (HOW to verify; never lock numbers). Point “詳見 PFD” to `resources/pfd-map.yaml` topic keys.
+Use `faq/index.yaml` + `faq/*.md` for short answers (HOW to verify; never lock numbers). Point “詳見 PFD” to `resources/pfd-map.yaml` topic keys. Topics **22** (`live-funded-transition`) and **23** (`multi-account-cost-ev`) cover Live/sim-to-live HOW-TO and fee/EV literacy (no locked thresholds; no blowup farming).
 
 ## Affiliates
 

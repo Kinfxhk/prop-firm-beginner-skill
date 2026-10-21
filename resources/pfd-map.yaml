@@ -90,3 +90,11 @@ hedging:
 commissions_spreads:
   url: null
   note: fill when PFD slug known
+
+live_funded_transition:
+  url: null
+  note: fill when PFD slug known
+
+multi_account_cost_ev:
+  url: null
+  note: fill when PFD slug known

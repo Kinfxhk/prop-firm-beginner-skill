@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.3 — Live Funded FAQ + multi-account cost/EV HOW-TO; payout Live-trigger sentence; required field live_funded_transition
+
+- SKILL.md: required-attempt `live_funded_transition`; out-of-scope strategy/ICT/backtest + blowup farming; FAQ routing notes 22/23
+- FAQ 22 Live Funded／真倉過渡；FAQ 23 多帳戶成本／EV 查法（無鎖定數字、拒爆倉流）
+- FAQ 08：出金次數／Live 觸發須跟官方；FAQ 07 交叉連結
+- `references/output-schemas.md` + coverage matrix → 0.1.3；`pfd-map` keys；README FAQ 23
+
 ## 0.1.2 — user_geo residence gate
 
 - SKILL.md: hard rule `user_geo` gate before usability / payout conclusions; questionnaire requires residence first; Rule Card fields `geo_eligibility` + `payout_methods_for_geo`

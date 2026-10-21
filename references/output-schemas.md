@@ -1,4 +1,4 @@
-# Output schemas (V0.1.2)
+# Output schemas (V0.1.3)
 
 ## Rule Card row
 
@@ -29,6 +29,7 @@ Must attempt (verified, pending, or failure-template):
 | `penalties` | official consequences only (account disable, profit confiscation, void account, etc.) |
 | `trading_sessions` | session hours, overnight, weekend, news trading windows |
 | `commissions_spreads_fees` | commission, spread, platform / data fees |
+| `live_funded_transition` | Live Funded / sim-to-live transition policy (payout thresholds, Live eligibility — official wording only; diligence + failure template; never lock numbers) |
 
 ## Failure template (replaces bare「未能核實」)
 

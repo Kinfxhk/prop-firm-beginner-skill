@@ -1,4 +1,4 @@
-# FAQ router — ids 01–21; answers are HOW-TO-VERIFY only (runtime open-page)
+# FAQ router — ids 01–23; answers are HOW-TO-VERIFY only (runtime open-page)
 version: 0
 topics:
   - id: "01"
@@ -106,3 +106,13 @@ topics:
     file: 21-commissions-spreads.md
     pfd_key: commissions_spreads
     title_zh: 交易佣金／點差／平台費
+  - id: "22"
+    slug: live-funded-transition
+    file: 22-live-funded-transition.md
+    pfd_key: live_funded_transition
+    title_zh: Live Funded／真倉過渡
+  - id: "23"
+    slug: multi-account-cost-ev
+    file: 23-multi-account-cost-ev.md
+    pfd_key: multi_account_cost_ev
+    title_zh: 多帳戶成本／期望值（EV）查法
