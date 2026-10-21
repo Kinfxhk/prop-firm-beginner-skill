@@ -2,7 +2,7 @@
 
 **本說明以繁體中文為準。** English follows below.
 
-**狀態：V0 脚手架（0.1.3）** — 開源 Agent Skill，協助新手**選擇 prop firm**、以**即時開頁核實**查閱規則、回答 FAQ，並可選擇連至 [Propfirms Drama](https://propfirmsdrama.com/) 閱讀繁中長文。**非投資建議。** 與任何 proprietary trading firm 無隸屬關係。
+**狀態：V0 脚手架（0.1.4）** — 開源 Agent Skill，協助新手**選擇 prop firm**、以**即時開頁核實**查閱規則、回答 FAQ，並可選擇連至 [Propfirms Drama](https://propfirmsdrama.com/) 閱讀繁中長文。**非投資建議。** 與任何 proprietary trading firm 無隸屬關係。
 
 [English](#english)
 
@@ -26,6 +26,7 @@
 | 不冒充 | 不以 firm logo 作為品牌；不扮演官方客服 |
 | 不教導規避地區限制／KYC | 僅連至官方地區限制說明 |
 | 聯盟披露 | 每次追蹤 CTA 均須披露；不提交未公開追蹤碼 |
+| 唔硬推公司 | 只輸出短名單＋條件對照＋開頁核實卡；禁用「一定要買／唯一推薦／保證通過」；用「可能適合／需自行核實」；本 Skill 非任何 firm 的產品推銷 |
 
 ## 安裝
 
@@ -56,6 +57,8 @@
 
 僅供教學／規劃輔助。Prop firm 產品涉及費用及虧損風險。規則經常變更；請以官網即時核實為準。稅務／KYC 說明不構成專業意見。
 
+本 Skill 係**資訊／規劃輔助**，不構成對任何 proprietary trading firm 的推介或背書；運營者若使用 affiliate，自負合規與披露。
+
 ## 授權
 
 MIT — 見 [LICENSE](./LICENSE) 及 [NOTICE](./NOTICE)。
@@ -66,7 +69,7 @@ MIT — 見 [LICENSE](./LICENSE) 及 [NOTICE](./NOTICE)。
 
 **The Traditional Chinese section above is authoritative.** English is a parallel summary.
 
-**Status: V0 scaffold (0.1.3)** — Open-source Agent Skill to help beginners **choose a prop firm**, read rules via **open-page verification**, answer FAQ, and optionally bridge to [Propfirms Drama](https://propfirmsdrama.com/) for Chinese deep-dives. **Not investment advice.** Not affiliated with any proprietary trading firm.
+**Status: V0 scaffold (0.1.4)** — Open-source Agent Skill to help beginners **choose a prop firm**, read rules via **open-page verification**, answer FAQ, and optionally bridge to [Propfirms Drama](https://propfirmsdrama.com/) for Chinese deep-dives. **Not investment advice.** Not affiliated with any proprietary trading firm.
 
 ### What this is
 
@@ -88,6 +91,7 @@ A Cursor / Claude / Hermes-compatible [`SKILL.md`](./SKILL.md) plus:
 | No impersonation | No firm logos as branding; do not act as firm support |
 | No geo/KYC bypass | Link official restrictions only |
 | Affiliate disclosure | Every tracking CTA; never commit secret codes |
+| No hard-sell | Output only shortlist + condition comparison + open-page Rule Cards; forbid “must buy / only recommended / guaranteed pass”; use “may fit / verify yourself”; this Skill is not a product pitch for any firm |
 
 ### Install
 
@@ -102,6 +106,8 @@ A Cursor / Claude / Hermes-compatible [`SKILL.md`](./SKILL.md) plus:
 ### Disclaimer
 
 Educational planning aid only. Prop firm products involve fees and risk of loss. Rules change; always re-verify on the firm’s official site. Tax/KYC notes are not professional advice.
+
+This Skill is an **informational / planning aid** only; it does **not** constitute a recommendation or endorsement of any proprietary trading firm. Operators who use affiliates are solely responsible for disclosure and advertising compliance.
 
 ### License
 

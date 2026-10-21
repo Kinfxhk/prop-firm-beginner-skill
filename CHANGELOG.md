@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.4 — Legal tone gate (no hard-sell; info/planning aid; FAQ18 risk-first; NOTICE/README; tier ≠ buy advice)
+
+- SKILL.md: hard rule 12 no hard-sell / no sole recommendation; description「not a solicitation」; workflow shortlist+Rule Cards only; out-of-scope hard-sell
+- FAQ 18: risk disclosure first; 非投資／非金融建議; agent forbid「應該買 X」; index title 風險優先
+- README／NOTICE: info/planning aid; no endorsement; operator affiliate compliance; hard-rules「唔硬推公司」
+- `references/methodology-tier.md`: 非官方評級；≠ buy recommendation；V0 no scored rankings
+
+
 ## 0.1.3 — Live Funded FAQ + multi-account cost/EV HOW-TO; payout Live-trigger sentence; required field live_funded_transition
 
 - SKILL.md: required-attempt `live_funded_transition`; out-of-scope strategy/ICT/backtest + blowup farming; FAQ routing notes 22/23

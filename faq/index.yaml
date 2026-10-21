@@ -90,7 +90,7 @@ topics:
     slug: should-i-buy
     file: 18-should-i-buy.md
     pfd_key: should_i_buy
-    title_zh: 「我應否購買」決策樹
+    title_zh: 「應否購買」決策樹 — 風險優先
   - id: "19"
     slug: vpn-vps-login
     file: 19-vpn-vps-login.md

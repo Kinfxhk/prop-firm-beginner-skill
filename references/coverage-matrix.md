@@ -1,6 +1,6 @@
-# Coverage matrix (V0.1.3)
+# Coverage matrix (V0.1.4)
 
-| Area | V0.1.3 | Notes |
+| Area | V0.1.4 | Notes |
 |------|--------|-------|
 | Firm stubs (URL + product_line) | 10 | See `firms/` |
 | FAQ topics | 23 | Short HOW-TO-VERIFY answers; PFD for depth |

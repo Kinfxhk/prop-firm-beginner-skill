@@ -5,11 +5,12 @@ description: >
   answer common FAQ, and build Rule Cards with open-page verification. Link
   Chinese deep-dives to propfirmsdrama.com. Use when the user asks which prop
   firm to pick, what drawdown/consistency means, payout timing, or how to verify
-  a promo. Not investment advice. Never teach geo/KYC bypass or guarantee a pass.
-version: 0.1.3
+  a promo. Not investment advice. Not a solicitation to buy any firm. Never teach
+  geo/KYC bypass or guarantee a pass.
+version: 0.1.4
 ---
 
-# Prop Firm Beginner Skill (V0.1.3)
+# Prop Firm Beginner Skill (V0.1.4)
 
 ## Hard rules
 
@@ -28,11 +29,13 @@ version: 0.1.3
 9. **Honest stubs.** `firms/*.yaml` hold URLs + `product_lines` only. Never invent fees, DD, targets, or payout days into YAML.
 10. **PFD map nulls.** If `resources/pfd-map.yaml` has `url: null`, say the PFD link is not configured. Never invent a URL or paste an article body.
 11. **Stubs are not recommendations.** `firms/*.yaml` are URL starting points; never rank or recommend a firm from the stub list alone.
+12. **No hard-sell / no sole recommendation.** This Skill is an **informational / planning aid**, not a product pitch for any firm. **Forbidden** phrasing:「一定要買 X」「最推薦唯一」「you must buy X」「only recommended firm」「保證通過／保證出金」/ “guaranteed pass or payout”. **Allowed outputs only:** shortlist + condition comparison + open-page Rule Cards. Prefer「可能適合／需自行核實」/ “may fit / verify yourself” — never「你應該買」/ “you should buy”. Every CTA with a tracking link → affiliate disclosure (rule 7). Do not hard-push a single firm as the answer.
 
 ## Out of scope (explicit)
 
 - WordPress / site ops / auto-publishing to any live site
 - Trading signals or “guaranteed challenge pass”
+- Hard-selling / sole-recommending a firm as “must buy” or “only recommended”
 - Teaching geo / KYC / payment bypass
 - Trading strategy / ICT / SMC / entry systems (not this Skill)
 - Backtest tooling or strategy validation workflows (not this Skill)
@@ -69,11 +72,11 @@ When asked `verify firm <name> [topic]` (or when filling a Rule Card):
 ## Workflow
 
 1. **Questionnaire** — **`user_geo` first (required)** — country/region (user self-report). Hong Kong is an **example** only, not the only geo. Then: product line (futures / CFD / forex — do not mix tables), budget, account size preference, platform (NT / Tradovate / Rithmic / MT5 / …), goal (challenge vs instant funded), payout cadence, EA/news preference → optional `profile.yaml` summary. **Without `user_geo`, do not shortlist as “usable” or give payout conclusions.**
-2. **Shortlist** — only after `user_geo` is known: match `firms/*.yaml` stubs by `product_lines` + open-page geo/platform checks for that `user_geo`; mark `geo_ok` / `platform_ok` / `payout_method_ok` / `active_pending` only after those checks (or leave pending). Never set `geo_ok` or payout conclusions without `user_geo` + open-page evidence. State premise「以用戶所報居住地＝X 為前提」on the shortlist.
-3. **Rule Card** — one firm × one product line; every **required-attempt** field below must be tried (verified, pending mid-check, or failure-template).
+2. **Shortlist (compare only)** — only after `user_geo` is known: match `firms/*.yaml` stubs by `product_lines` + open-page geo/platform checks for that `user_geo`; mark `geo_ok` / `platform_ok` / `payout_method_ok` / `active_pending` only after those checks (or leave pending). Output = **shortlist + condition comparison**, not a sole「應該買 X」. Never set `geo_ok` or payout conclusions without `user_geo` + open-page evidence. State premise「以用戶所報居住地＝X 為前提」on the shortlist. Wording:「可能適合／需自行核實」— never「一定要買／最推薦唯一／保證通過」.
+3. **Rule Card** — one firm × one product line; every **required-attempt** field below must be tried (verified, pending mid-check, or failure-template). Rule Cards are verification artefacts, not purchase recommendations.
 4. **Verify** — diligence path above. Missing source after trying applicable methods → failure template (`以上來源未見公開資料`), never invent, never bare「未能核實」.
 5. **Optional PFD** — if user wants Chinese explainers / case studies / payout stories, add links from `resources/pfd-map.yaml` (do not copy article bodies). If a URL is `null`, say the PFD link is not configured; never invent one.
-6. **CTA** — if affiliate link used: disclosure sentence every time; rules still “以官網為準”.
+6. **CTA (optional, disclosed)** — if affiliate / tracking link used: disclosure sentence every time; rules still “以官網為準”. CTA must not read as「你應該買」; frame as optional next step after shortlist + Rule Cards.
 
 ## Rule Card output schema
 
