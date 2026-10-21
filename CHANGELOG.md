@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.5 — FUNDING/README → linktr.ee/kinfx (drop BMC placeholder)
+
+- `.github/FUNDING.yml`: `custom: ["https://linktr.ee/kinfx"]`；移除 `buy_me_a_coffee` 佔位
+- README（繁中＋英文）：贊助段改聯盟／優惠總入口；個別 firm 追蹤碼仍用本地 `affiliates.yaml`（gitignored）
+- `affiliates.example.yaml`: 註解說明 linktr 為公開總入口；空 link／code 不變
+- 披露：頁上部分連結可能為聯盟連結；≠ firm 推介／背書；非投資建議
+
 ## 0.1.4 — Legal tone gate (no hard-sell; info/planning aid; FAQ18 risk-first; NOTICE/README; tier ≠ buy advice)
 
 - SKILL.md: hard rule 12 no hard-sell / no sole recommendation; description「not a solicitation」; workflow shortlist+Rule Cards only; out-of-scope hard-sell

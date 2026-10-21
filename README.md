@@ -2,7 +2,7 @@
 
 **本說明以繁體中文為準。** English follows below.
 
-**狀態：V0 腳手架（0.1.4）** — 開源 Agent Skill，協助新手**選擇 prop firm**、以**即時開頁核實**查閱規則、回答 FAQ，並可選擇連至 [Propfirms Drama](https://propfirmsdrama.com/) 閱讀繁中長文。**非投資建議。** 與任何 proprietary trading firm 無隸屬關係。
+**狀態：V0 腳手架（0.1.5）** — 開源 Agent Skill，協助新手**選擇 prop firm**、以**即時開頁核實**查閱規則、回答 FAQ，並可選擇連至 [Propfirms Drama](https://propfirmsdrama.com/) 閱讀繁中長文。**非投資建議。** 與任何 proprietary trading firm 無隸屬關係。
 
 [English](#english)
 
@@ -49,9 +49,13 @@
 - `firms/*.yaml` 只存 URL 與 product line，不存費用、回撤、利潤目標或出金日數。
 - FAQ 以香港用語書寫；SKILL.md 為英文。若你要對外發佈，請自行調整語氣及披露。
 
-## 贊助（Buy Me a Coffee）
+## 聯盟／優惠總入口（Linktree）
 
-[`.github/FUNDING.yml`](./.github/FUNDING.yml) 暫用佔位符 `YOUR_BMC_USERNAME`。建立 [Buy Me a Coffee](https://www.buymeacoffee.com/) 頁面並開啟 repo Sponsorships 後再更新。贊助並不等於與任何 firm 有聯盟關係。
+維護者聯盟／優惠總入口：**https://linktr.ee/kinfx**（見 [`.github/FUNDING.yml`](./.github/FUNDING.yml)）。
+
+- 個別 firm 追蹤碼仍用本地 `affiliates.yaml`（由 `affiliates.example.yaml` 複製；**gitignored**），**勿 commit 真碼**。
+- 【聯盟披露】該頁部分連結可能為聯盟／推薦連結；經此註冊或付費，維護者可能獲得佣金。使用連結或贊助**不等於**對任何 proprietary trading firm 的推介或背書。規則、價錢、出金以該公司官網為準。**非投資建議。**
+- 本 Skill 仍遵守「唔硬推公司」硬規則：只輸出短名單＋條件對照＋開頁核實卡。
 
 ## 免責
 
@@ -69,7 +73,7 @@ MIT — 見 [LICENSE](./LICENSE) 及 [NOTICE](./NOTICE)。
 
 **The Traditional Chinese section above is authoritative.** English is a parallel summary.
 
-**Status: V0 scaffold (0.1.4)** — Open-source Agent Skill to help beginners **choose a prop firm**, read rules via **open-page verification**, answer FAQ, and optionally bridge to [Propfirms Drama](https://propfirmsdrama.com/) for Chinese deep-dives. **Not investment advice.** Not affiliated with any proprietary trading firm.
+**Status: V0 scaffold (0.1.5)** — Open-source Agent Skill to help beginners **choose a prop firm**, read rules via **open-page verification**, answer FAQ, and optionally bridge to [Propfirms Drama](https://propfirmsdrama.com/) for Chinese deep-dives. **Not investment advice.** Not affiliated with any proprietary trading firm.
 
 ### What this is
 
@@ -99,9 +103,13 @@ A Cursor / Claude / Hermes-compatible [`SKILL.md`](./SKILL.md) plus:
 2. Optionally copy `affiliates.example.yaml` → `affiliates.yaml` and fill **your** links/codes (do not commit).
 3. Ask e.g. “我想在香港做期貨 prop，預算有限，請協助短名單並核實規則。”
 
-### Sponsor (Buy Me a Coffee)
+### Affiliate / promo hub (Linktree)
 
-[`.github/FUNDING.yml`](./.github/FUNDING.yml) uses placeholder `YOUR_BMC_USERNAME`. Replace after you create a [Buy Me a Coffee](https://www.buymeacoffee.com/) page and enable repo Sponsorships. Funding ≠ affiliation with any firm.
+Maintainer affiliate / promo hub: **https://linktr.ee/kinfx** (see [`.github/FUNDING.yml`](./.github/FUNDING.yml)).
+
+- Per-firm tracking codes still live in local `affiliates.yaml` (copied from `affiliates.example.yaml`; **gitignored**) — **do not commit real codes**.
+- **Affiliate disclosure:** some links on that page may be affiliate / referral links; the maintainer may earn a commission if you register or pay through them. Using a link or funding **does not** recommend or endorse any proprietary trading firm. Rules and prices are always those on the firm’s official site. **Not investment advice.**
+- Hard-sell bans in this Skill still apply: shortlist + condition comparison + open-page Rule Cards only.
 
 ### Disclaimer
 
