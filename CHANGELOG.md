@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.6 — README：Linktree 與 FUNDING 拆兩行（避免 GitHub 渲染黏連）
+
+- README（繁中＋英文）：第一行只寫 Linktree；第二行另起 GitHub Sponsors／FUNDING 連結（唔用 `_…_` 包住）
+- 修復「聯盟／優惠總入口」一行內 linktr.ee 與 `.github/FUNDING.yml` 渲染像連埋
+
 ## 0.1.5 — FUNDING/README → linktr.ee/kinfx (drop BMC placeholder)
 
 - `.github/FUNDING.yml`: `custom: ["https://linktr.ee/kinfx"]`；移除 `buy_me_a_coffee` 佔位
