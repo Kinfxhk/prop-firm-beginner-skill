@@ -2,7 +2,7 @@
 
 **本說明以繁體中文為準。** English follows below.
 
-**狀態：V0 脚手架（0.1.1）** — 開源 Agent Skill，協助新手**選擇 prop firm**、以**即時開頁核實**查閱規則、回答 FAQ，並可選擇連至 [Propfirms Drama](https://propfirmsdrama.com/) 閱讀繁中長文。**非投資建議。** 與任何 proprietary trading firm 無隸屬關係。
+**狀態：V0 脚手架（0.1.2）** — 開源 Agent Skill，協助新手**選擇 prop firm**、以**即時開頁核實**查閱規則、回答 FAQ，並可選擇連至 [Propfirms Drama](https://propfirmsdrama.com/) 閱讀繁中長文。**非投資建議。** 與任何 proprietary trading firm 無隸屬關係。
 
 [English](#english)
 
@@ -21,6 +21,7 @@
 |------|------|
 | 開頁核實 | 價格／規則／出金／地區／優惠 → 必須有 `url`＋`opened_at`＋`saw`；失敗輸出跟從 `SKILL.md` Failure template |
 | 盡力查＋列方法 | 未試夠路徑不得空口「未能核實」；須列已用方法＋已開 URL＋`opened_at`，再寫「以上來源未見公開資料」；禁止發明數字 |
+| 先釐清居住地 | 未取得 `user_geo`（國家／地區，用戶自報即可）前，不給「可用／可出金」結論；出金與適用性須按該地官方頁核實，並標明「以用戶所報居住地＝X 為前提」 |
 | AS IS／非投資建議 | 模擬資金＋挑戰費風險；不出交易訊號；不保證通過挑戰 |
 | 不冒充 | 不以 firm logo 作為品牌；不扮演官方客服 |
 | 不教導規避地區限制／KYC | 僅連至官方地區限制說明 |
@@ -64,7 +65,7 @@ MIT — 見 [LICENSE](./LICENSE) 及 [NOTICE](./NOTICE)。
 
 **The Traditional Chinese section above is authoritative.** English is a parallel summary.
 
-**Status: V0 scaffold (0.1.1)** — Open-source Agent Skill to help beginners **choose a prop firm**, read rules via **open-page verification**, answer FAQ, and optionally bridge to [Propfirms Drama](https://propfirmsdrama.com/) for Chinese deep-dives. **Not investment advice.** Not affiliated with any proprietary trading firm.
+**Status: V0 scaffold (0.1.2)** — Open-source Agent Skill to help beginners **choose a prop firm**, read rules via **open-page verification**, answer FAQ, and optionally bridge to [Propfirms Drama](https://propfirmsdrama.com/) for Chinese deep-dives. **Not investment advice.** Not affiliated with any proprietary trading firm.
 
 ### What this is
 
@@ -81,6 +82,7 @@ A Cursor / Claude / Hermes-compatible [`SKILL.md`](./SKILL.md) plus:
 |------|---------|
 | Open-page verify | Price/rules/payout/geo/promo → `url` + `opened_at` + `saw`; failures use SKILL Failure template |
 | Diligence + list methods | Do not bare-label「未能核實」without trying the path; list methods + URLs + `opened_at`, then「以上來源未見公開資料」; never invent numbers |
+| Clarify residence first | Without `user_geo` (country/region; user self-report OK), do not conclude “usable / can withdraw”; verify geo eligibility and payout methods for that place; state “assuming user-reported residence = X” |
 | AS IS / not advice | Simulated capital + challenge-fee risk; no signals; no guaranteed pass |
 | No impersonation | No firm logos as branding; do not act as firm support |
 | No geo/KYC bypass | Link official restrictions only |

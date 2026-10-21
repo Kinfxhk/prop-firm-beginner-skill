@@ -1,11 +1,12 @@
-# Coverage matrix (V0.1.1)
+# Coverage matrix (V0.1.2)
 
-| Area | V0.1.1 | Notes |
+| Area | V0.1.2 | Notes |
 |------|--------|-------|
 | Firm stubs (URL + product_line) | 10 | See `firms/` |
 | FAQ topics | 21 | Short HOW-TO-VERIFY answers; PFD for depth |
 | Open-page Rule Card | yes | Runtime only; diligence path + failure template |
-| Required-attempt fields | yes | VPN/VPS, hedging, penalties, sessions, fees + existing |
+| Required-attempt fields | yes | geo_eligibility, payout_methods_for_geo (+ VPN/VPS, hedging, penalties, sessions, fees + existing) |
+| `user_geo` residence gate | yes | Required before usability / payout conclusions |
 | Affiliate template | example only | No live codes |
 | Tier / scoring methodology | stub | V0.1 |
 | Compare table generator | deferred | V0.1 |

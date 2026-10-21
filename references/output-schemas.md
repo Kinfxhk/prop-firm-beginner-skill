@@ -1,4 +1,4 @@
-# Output schemas (V0.1.1)
+# Output schemas (V0.1.2)
 
 ## Rule Card row
 
@@ -22,7 +22,8 @@ Must attempt (verified, pending, or failure-template):
 | daily_loss | existing |
 | consistency / min trading days | existing |
 | payout / profit split | existing |
-| geo / region | existing |
+| `geo_eligibility` | official restricted countries / eligibility **vs known `user_geo`**. **Requires `user_geo`**; without it → stop and ask (do not fill as verified for a guessed geo) |
+| `payout_methods_for_geo` | payout methods for that `user_geo` (bank / Wise / PayPal / crypto / …). **Requires `user_geo`**; diligence + failure template; without it → stop and ask |
 | `vpn_vps_multi_location_login` | VPN / VPS / multi-location or multi-device login limits |
 | `hedging` | hedging, opposite positions, multi-account hedge |
 | `penalties` | official consequences only (account disable, profit confiscation, void account, etc.) |
@@ -45,7 +46,9 @@ Must attempt (verified, pending, or failure-template):
 
 ## Shortlist firm line
 
-`id` · `display_name` · `product_line` · flags (`geo_ok` / `platform_ok` / …) · `verify_note`
+`id` · `display_name` · `product_line` · **`user_geo` premise** · flags (`geo_ok` / `platform_ok` / …) · `verify_note`
+
+Do not mark `geo_ok` or payout conclusions without known `user_geo` + open-page checks. State「以用戶所報居住地＝X 為前提」.
 
 ## CTA block
 

@@ -6,23 +6,28 @@ description: >
   Chinese deep-dives to propfirmsdrama.com. Use when the user asks which prop
   firm to pick, what drawdown/consistency means, payout timing, or how to verify
   a promo. Not investment advice. Never teach geo/KYC bypass or guarantee a pass.
-version: 0.1.1
+version: 0.1.2
 ---
 
-# Prop Firm Beginner Skill (V0.1.1)
+# Prop Firm Beginner Skill (V0.1.2)
 
 ## Hard rules
 
 1. **Diligent open-page verify (FAIL if lazy).** For any price, rule, payout, geo limit, fee, session, hedging, VPN/VPS, penalty, or promo: walk the **minimum diligence path** (as applicable): homepage → Help/FAQ search → TOS/rules PDF → checkout/pricing → official status page / official X (**promo deadlines only**). Record **`url`**, **`opened_at`** (ISO-8601, Asia/Hong_Kong), and **`saw`**. **Not opening / not trying enough ≠ instant「未能核實」.** Only after exhausting applicable paths: list `methods_tried` + URLs + `opened_at`, then conclude **`以上來源未見公開資料`**. Never emit bare「未能核實」without that evidence. Never invent numbers. Never treat memory, forums, Trustpilot, Discord, or affiliate emails as the rule source of truth.
-2. **Not investment advice.** Prop products typically use **simulated capital** and involve **challenge / subscription fee risk**. Say so on Rule Cards and CTAs. No trading signals. No “guaranteed pass”.
-3. **No impersonation.** Do not speak as a firm’s support. Do not embed firm logos as Skill branding. Firm names are descriptive citations only (see NOTICE).
-4. **No geo / KYC bypass.** Explain that restrictions exist; link official Help/TOS. Never teach how to circumvent region or identity checks.
-5. **Trustpilot / forums = 對照 only.** Useful for risk colour; never for Rule Card numeric fields.
-6. **Affiliates.** Every CTA that uses a tracking link must include disclosure (from `affiliates.example.yaml` pattern or local override). Never hardcode secret / unpublished codes in this repo. Operators supply their own compliant codes.
-7. **Two layers.** Fact layer = official pages. Interpretation layer = PFD / education links via `resources/pfd-map.yaml` (`resource: pfd`). Do not paste full PFD articles into the repo.
-8. **Honest stubs.** `firms/*.yaml` hold URLs + `product_lines` only. Never invent fees, DD, targets, or payout days into YAML.
-9. **PFD map nulls.** If `resources/pfd-map.yaml` has `url: null`, say the PFD link is not configured. Never invent a URL or paste an article body.
-10. **Stubs are not recommendations.** `firms/*.yaml` are URL starting points; never rank or recommend a firm from the stub list alone.
+2. **`user_geo` residence gate.** Before conclusions such as「你可以用／你可以出金」or “you can use this firm / you can withdraw”, you **MUST** obtain `user_geo` (country/region; **user self-report is enough**). If missing → **ask first**; do not invent geo. Once known:
+   - When shortlisting/filtering firms: open-page verify official **restricted countries / geo eligibility** for that `user_geo`.
+   - Payout guidance: open-page verify methods available for that geo (bank / Wise / PayPal / crypto / etc.).
+   - Every applicability / payout answer must state the premise:「以用戶所報居住地＝X 為前提」/ “assuming user-reported residence = X”. If residence changes → **re-verify**.
+   - Still **never** teach geo/KYC bypass.
+3. **Not investment advice.** Prop products typically use **simulated capital** and involve **challenge / subscription fee risk**. Say so on Rule Cards and CTAs. No trading signals. No “guaranteed pass”.
+4. **No impersonation.** Do not speak as a firm’s support. Do not embed firm logos as Skill branding. Firm names are descriptive citations only (see NOTICE).
+5. **No geo / KYC bypass.** Explain that restrictions exist; link official Help/TOS. Never teach how to circumvent region or identity checks.
+6. **Trustpilot / forums = 對照 only.** Useful for risk colour; never for Rule Card numeric fields.
+7. **Affiliates.** Every CTA that uses a tracking link must include disclosure (from `affiliates.example.yaml` pattern or local override). Never hardcode secret / unpublished codes in this repo. Operators supply their own compliant codes.
+8. **Two layers.** Fact layer = official pages. Interpretation layer = PFD / education links via `resources/pfd-map.yaml` (`resource: pfd`). Do not paste full PFD articles into the repo.
+9. **Honest stubs.** `firms/*.yaml` hold URLs + `product_lines` only. Never invent fees, DD, targets, or payout days into YAML.
+10. **PFD map nulls.** If `resources/pfd-map.yaml` has `url: null`, say the PFD link is not configured. Never invent a URL or paste an article body.
+11. **Stubs are not recommendations.** `firms/*.yaml` are URL starting points; never rank or recommend a firm from the stub list alone.
 
 ## Out of scope (explicit)
 
@@ -60,8 +65,8 @@ When asked `verify firm <name> [topic]` (or when filling a Rule Card):
 
 ## Workflow
 
-1. **Questionnaire** — product line (futures / CFD / forex — do not mix tables), location (esp. HK / restricted), budget, account size preference, platform (NT / Tradovate / Rithmic / MT5 / …), goal (challenge vs instant funded), payout cadence, EA/news preference → optional `profile.yaml` summary.
-2. **Shortlist** — match `firms/*.yaml` stubs by `product_lines` + geo/platform hints from **verified** pages; mark `geo_ok` / `platform_ok` / `payout_method_ok` / `active_pending` only after open-page checks (or leave pending).
+1. **Questionnaire** — **`user_geo` first (required)** — country/region (user self-report). Hong Kong is an **example** only, not the only geo. Then: product line (futures / CFD / forex — do not mix tables), budget, account size preference, platform (NT / Tradovate / Rithmic / MT5 / …), goal (challenge vs instant funded), payout cadence, EA/news preference → optional `profile.yaml` summary. **Without `user_geo`, do not shortlist as “usable” or give payout conclusions.**
+2. **Shortlist** — only after `user_geo` is known: match `firms/*.yaml` stubs by `product_lines` + open-page geo/platform checks for that `user_geo`; mark `geo_ok` / `platform_ok` / `payout_method_ok` / `active_pending` only after those checks (or leave pending). Never set `geo_ok` or payout conclusions without `user_geo` + open-page evidence. State premise「以用戶所報居住地＝X 為前提」on the shortlist.
 3. **Rule Card** — one firm × one product line; every **required-attempt** field below must be tried (verified, pending mid-check, or failure-template).
 4. **Verify** — diligence path above. Missing source after trying applicable methods → failure template (`以上來源未見公開資料`), never invent, never bare「未能核實」.
 5. **Optional PFD** — if user wants Chinese explainers / case studies / payout stories, add links from `resources/pfd-map.yaml` (do not copy article bodies). If a URL is `null`, say the PFD link is not configured; never invent one.
@@ -88,14 +93,15 @@ Attempt all of these (plus existing money/risk fields). Status = `verified` | `p
 | `daily_loss` | existing |
 | `consistency` / min trading days | existing |
 | `payout` / profit split | existing |
-| `geo` / region limits | existing |
+| `geo_eligibility` | official restricted countries / eligibility **vs known `user_geo`** (requires `user_geo`; if unknown → stop and ask — do not verify against a guessed geo) |
+| `payout_methods_for_geo` | payout methods available for that `user_geo` (bank / Wise / PayPal / crypto / …; diligence + failure template; requires `user_geo`) |
 | `vpn_vps_multi_location_login` | VPN / VPS / multi-location login limits |
 | `hedging` | hedging / opposite positions / multi-account hedge |
 | `penalties` | violation consequences (disable, confiscate profits, void account — **official wording only**) |
 | `trading_sessions` | sessions / overnight / weekend / news trading |
 | `commissions_spreads_fees` | commission / spread / platform fees |
 
-Also fill when verified: challenge steps, profit target, reset price, activation, prohibited behaviour, alleged hidden rules (label **alleged** + non-authority source, or omit).
+Applicability and payout answers must cite the premise「以用戶所報居住地＝X 為前提」. Also fill when verified: challenge steps, profit target, reset price, activation, prohibited behaviour, alleged hidden rules (label **alleged** + non-authority source, or omit).
 
 ## FAQ routing
 

@@ -40,12 +40,12 @@ topics:
     slug: payout-methods
     file: 08-payout-methods.md
     pfd_key: payout_methods
-    title_zh: 出金方式與地區限制
+    title_zh: 出金方式與地區限制（先 user_geo）
   - id: "09"
     slug: hong-kong-geo
     file: 09-hong-kong-geo.md
     pfd_key: hong_kong_geo
-    title_zh: 香港／受限國注意
+    title_zh: 居住地／地區資格（香港為例）
   - id: "10"
     slug: platforms-data-fees
     file: 10-platforms-data-fees.md

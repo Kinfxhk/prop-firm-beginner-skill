@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.2 — user_geo residence gate
+
+- SKILL.md: hard rule `user_geo` gate before usability / payout conclusions; questionnaire requires residence first; Rule Card fields `geo_eligibility` + `payout_methods_for_geo`
+- `references/output-schemas.md` + coverage matrix aligned
+- FAQ 08／09: user_geo-first flow; HK as example only
+- README: hard-rules row「先釐清居住地」(EN parallel)
+
 ## 0.1.1 — Diligence verify + required fields
 
 - SKILL.md: diligence verify path, failure output template (no bare「未能核實」), required-attempt Rule Card fields (VPN/VPS, hedging, penalties, sessions, commissions/spreads/fees)
