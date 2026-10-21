@@ -2,7 +2,7 @@
 
 **本說明以繁體中文為準。** English follows below.
 
-**狀態：V0 脚手架（0.1.4）** — 開源 Agent Skill，協助新手**選擇 prop firm**、以**即時開頁核實**查閱規則、回答 FAQ，並可選擇連至 [Propfirms Drama](https://propfirmsdrama.com/) 閱讀繁中長文。**非投資建議。** 與任何 proprietary trading firm 無隸屬關係。
+**狀態：V0 腳手架（0.1.4）** — 開源 Agent Skill，協助新手**選擇 prop firm**、以**即時開頁核實**查閱規則、回答 FAQ，並可選擇連至 [Propfirms Drama](https://propfirmsdrama.com/) 閱讀繁中長文。**非投資建議。** 與任何 proprietary trading firm 無隸屬關係。
 
 [English](#english)
 
@@ -26,7 +26,7 @@
 | 不冒充 | 不以 firm logo 作為品牌；不扮演官方客服 |
 | 不教導規避地區限制／KYC | 僅連至官方地區限制說明 |
 | 聯盟披露 | 每次追蹤 CTA 均須披露；不提交未公開追蹤碼 |
-| 唔硬推公司 | 只輸出短名單＋條件對照＋開頁核實卡；禁用「一定要買／唯一推薦／保證通過」；用「可能適合／需自行核實」；本 Skill 非任何 firm 的產品推銷 |
+| 不硬推公司 | 只輸出短名單＋條件對照＋開頁核實卡；禁用「一定要買／唯一推薦／保證通過」；用「可能適合／需自行核實」；本 Skill 非任何 firm 的產品推銷 |
 
 ## 安裝
 
@@ -47,7 +47,7 @@
 - Live／成本 FAQ（22／23）只教查法；不鎖定出金次數門檻，不教爆倉流。
 - `resources/pfd-map.yaml` 是模板；`null` 代表未設定，不要發明 PFD URL。
 - `firms/*.yaml` 只存 URL 與 product line，不存費用、回撤、利潤目標或出金日數。
-- FAQ 以香港書面語書寫；SKILL.md 為英文。若你要對外發佈，請自行調整語氣及披露。
+- FAQ 以香港用語書寫；SKILL.md 為英文。若你要對外發佈，請自行調整語氣及披露。
 
 ## 贊助（Buy Me a Coffee）
 
@@ -57,7 +57,7 @@
 
 僅供教學／規劃輔助。Prop firm 產品涉及費用及虧損風險。規則經常變更；請以官網即時核實為準。稅務／KYC 說明不構成專業意見。
 
-本 Skill 係**資訊／規劃輔助**，不構成對任何 proprietary trading firm 的推介或背書；運營者若使用 affiliate，自負合規與披露。
+本 Skill 是**資訊／規劃輔助**，不構成對任何 proprietary trading firm 的推介或背書；運營者若使用 affiliate，自負合規與披露。
 
 ## 授權
 
@@ -77,7 +77,7 @@ A Cursor / Claude / Hermes-compatible [`SKILL.md`](./SKILL.md) plus:
 
 - Firm **URL stubs** (`firms/`) — no locked fees or drawdown numbers
 - 23-topic FAQ short answers (`faq/`) — HOW to verify; numbers only at runtime
-- PFD topic → URL map (`resources/pfd-map.yaml`)
+- PFD topic → URL template (`resources/pfd-map.yaml`)
 - Affiliate **example** template (`affiliates.example.yaml`) with mandatory disclosure pattern
 
 ### Hard guarantees (agent must follow)
