@@ -1,0 +1,11 @@
+id: tradeify
+display_name: Tradeify
+product_lines:
+  - futures
+urls:
+  homepage: https://tradeify.co/
+  help: https://tradeify.co/
+  tos: https://tradeify.co/
+  pricing: https://tradeify.co/
+pricing_url_pending: true
+notes: stub — resolve Help/TOS/pricing paths at runtime; no rule numbers here

@@ -1,0 +1,12 @@
+id: fundednext
+display_name: FundedNext
+product_lines:
+  - cfd
+  - forex
+urls:
+  homepage: https://fundednext.com/
+  help: https://fundednext.com/
+  tos: https://fundednext.com/
+  pricing: https://fundednext.com/
+pricing_url_pending: true
+notes: stub — resolve Help/TOS/pricing paths at runtime; no rule numbers here

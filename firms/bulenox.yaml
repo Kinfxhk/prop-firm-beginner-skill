@@ -1,0 +1,11 @@
+id: bulenox
+display_name: Bulenox
+product_lines:
+  - futures
+urls:
+  homepage: https://bulenox.com/
+  help: https://bulenox.com/
+  tos: https://bulenox.com/
+  pricing: https://bulenox.com/
+pricing_url_pending: true
+notes: stub — resolve Help/TOS/pricing paths at runtime; no rule numbers here

@@ -1,0 +1,11 @@
+id: myfundedfutures
+display_name: My Funded Futures
+product_lines:
+  - futures
+urls:
+  homepage: https://myfundedfutures.com/
+  help: https://myfundedfutures.com/
+  tos: https://myfundedfutures.com/
+  pricing: https://myfundedfutures.com/
+pricing_url_pending: true
+notes: stub — resolve Help/TOS/pricing paths at runtime; no rule numbers here

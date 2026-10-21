@@ -1,0 +1,11 @@
+id: topstep
+display_name: Topstep
+product_lines:
+  - futures
+urls:
+  homepage: https://www.topstep.com/
+  help: https://www.topstep.com/
+  tos: https://www.topstep.com/
+  pricing: https://www.topstep.com/
+pricing_url_pending: true
+notes: stub — resolve Help/TOS/pricing paths at runtime; no rule numbers here

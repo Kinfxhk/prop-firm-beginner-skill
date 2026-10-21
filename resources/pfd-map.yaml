@@ -1,0 +1,79 @@
+# topic key → Propfirms Drama public URL
+# Do not paste article bodies into this repo.
+# If slug unknown: url: null + note
+
+home:
+  url: https://propfirmsdrama.com/
+  note: site home / hub
+
+what_is_prop_firm:
+  url: null
+  note: fill when PFD slug known
+
+challenge_vs_instant:
+  url: null
+  note: fill when PFD slug known
+
+drawdown_types:
+  url: null
+  note: fill when PFD slug known
+
+daily_loss:
+  url: null
+  note: fill when PFD slug known
+
+consistency_min_days:
+  url: null
+  note: fill when PFD slug known
+
+activation_fees:
+  url: null
+  note: fill when PFD slug known
+
+profit_split_payout:
+  url: null
+  note: fill when PFD slug known
+
+payout_methods:
+  url: null
+  note: fill when PFD slug known
+
+hong_kong_geo:
+  url: null
+  note: fill when PFD slug known
+
+platforms_data_fees:
+  url: null
+  note: fill when PFD slug known
+
+ea_copy_multi_account:
+  url: null
+  note: fill when PFD slug known
+
+news_overnight_weekend:
+  url: null
+  note: fill when PFD slug known
+
+reset_retry:
+  url: null
+  note: fill when PFD slug known
+
+promo_codes:
+  url: null
+  note: fill when PFD slug known
+
+penalties_hidden_rules:
+  url: null
+  note: fill when PFD slug known
+
+risk_shutdown_signals:
+  url: null
+  note: fill when PFD slug known
+
+tax_kyc_overview:
+  url: null
+  note: fill when PFD slug known
+
+should_i_buy:
+  url: null
+  note: fill when PFD slug known

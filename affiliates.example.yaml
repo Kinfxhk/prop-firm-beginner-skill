@@ -1,0 +1,72 @@
+# Copy to affiliates.yaml (gitignored) and fill YOUR links/codes.
+# Never commit real unpublished tracking codes to this repo.
+# Every CTA that uses a link below MUST print the disclosure string.
+
+# disclosure template (ZH + EN) — reuse or customize per firm:
+# default_disclosure: |
+#   【聯盟披露／Affiliate disclosure】以下登記連結可能含追蹤參數；若你經此連結付費／註冊，維護者可能獲得佣金。
+#   規則、價錢、出金以該公司官網／Help／TOS／結帳頁為準；本 Skill 非投資建議。
+#   This link may be an affiliate link. If you register or pay through it, the maintainer may earn a commission.
+#   Rules and prices are always those on the firm’s official site. Not investment advice.
+
+firms:
+  apex:
+    link: ""
+    code: ""
+    disclosure: >
+      【聯盟披露／Affiliate】此連結可能含追蹤；經此註冊／付費維護者或獲佣金。
+      規則以官網為準。Not investment advice. Affiliate link may earn a commission.
+  topstep:
+    link: ""
+    code: ""
+    disclosure: >
+      【聯盟披露／Affiliate】此連結可能含追蹤；經此註冊／付費維護者或獲佣金。
+      規則以官網為準。Not investment advice. Affiliate link may earn a commission.
+  tradeify:
+    link: ""
+    code: ""
+    disclosure: >
+      【聯盟披露／Affiliate】此連結可能含追蹤；經此註冊／付費維護者或獲佣金。
+      規則以官網為準。Not investment advice. Affiliate link may earn a commission.
+  myfundedfutures:
+    link: ""
+    code: ""
+    disclosure: >
+      【聯盟披露／Affiliate】此連結可能含追蹤；經此註冊／付費維護者或獲佣金。
+      規則以官網為準。Not investment advice. Affiliate link may earn a commission.
+  ftmo:
+    link: ""
+    code: ""
+    disclosure: >
+      【聯盟披露／Affiliate】此連結可能含追蹤；經此註冊／付費維護者或獲佣金。
+      規則以官網為準。Not investment advice. Affiliate link may earn a commission.
+  fundingpips:
+    link: ""
+    code: ""
+    disclosure: >
+      【聯盟披露／Affiliate】此連結可能含追蹤；經此註冊／付費維護者或獲佣金。
+      規則以官網為準。Not investment advice. Affiliate link may earn a commission.
+  the5ers:
+    link: ""
+    code: ""
+    disclosure: >
+      【聯盟披露／Affiliate】此連結可能含追蹤；經此註冊／付費維護者或獲佣金。
+      規則以官網為準。Not investment advice. Affiliate link may earn a commission.
+  fundednext:
+    link: ""
+    code: ""
+    disclosure: >
+      【聯盟披露／Affiliate】此連結可能含追蹤；經此註冊／付費維護者或獲佣金。
+      規則以官網為準。Not investment advice. Affiliate link may earn a commission.
+  luxtradingfirm:
+    link: ""
+    code: ""
+    disclosure: >
+      【聯盟披露／Affiliate】此連結可能含追蹤；經此註冊／付費維護者或獲佣金。
+      規則以官網為準。Not investment advice. Affiliate link may earn a commission.
+  bulenox:
+    link: ""
+    code: ""
+    disclosure: >
+      【聯盟披露／Affiliate】此連結可能含追蹤；經此註冊／付費維護者或獲佣金。
+      規則以官網為準。Not investment advice. Affiliate link may earn a commission.

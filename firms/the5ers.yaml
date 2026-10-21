@@ -1,0 +1,12 @@
+id: the5ers
+display_name: The5ers
+product_lines:
+  - cfd
+  - forex
+urls:
+  homepage: https://the5ers.com/
+  help: https://the5ers.com/
+  tos: https://the5ers.com/
+  pricing: https://the5ers.com/
+pricing_url_pending: true
+notes: stub — resolve Help/TOS/pricing paths at runtime; no rule numbers here

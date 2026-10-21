@@ -1,0 +1,19 @@
+prop-firm-beginner-skill
+Copyright (c) 2026 KINFX / Kinfxhk
+
+Licensed under the MIT License. See LICENSE.
+
+THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND.
+
+Firm names (e.g. Apex, Topstep, FTMO) and logos are trademarks of their
+respective owners. This project does not claim affiliation with, endorsement
+by, or impersonation of any proprietary trading firm. Do not embed firm logos
+as Skill branding.
+
+Rules, prices, payouts, geo restrictions, and promotions change often. YAML
+stubs in firms/ hold URLs and product-line labels only — never treat them as
+live numbers. Agents must open official pages at runtime.
+
+Not investment advice. Prop firm products typically involve simulated capital
+and challenge / subscription fees with risk of loss. Operators of forks or
+deployments are responsible for affiliate disclosure and local advertising law.

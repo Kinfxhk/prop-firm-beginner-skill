@@ -1,0 +1,13 @@
+# Copy to <id>.yaml. URLs + product_lines only — NO fees, DD, targets, or payout days.
+id: example_firm
+display_name: Example Firm
+product_lines:
+  - futures   # or: cfd, forex — do not invent hybrid labels
+urls:
+  homepage: https://example.com/
+  help: https://example.com/help
+  tos: https://example.com/terms
+  pricing: https://example.com/pricing
+# pricing_url_pending: true   # set if pricing URL not confirmed; use homepage for pricing
+# homepage_check: failed      # set by scaffold curl if homepage not 2xx/3xx
+notes: stub only; verify at runtime

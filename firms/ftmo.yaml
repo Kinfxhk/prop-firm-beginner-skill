@@ -1,0 +1,12 @@
+id: ftmo
+display_name: FTMO
+product_lines:
+  - cfd
+  - forex
+urls:
+  homepage: https://ftmo.com/
+  help: https://ftmo.com/
+  tos: https://ftmo.com/
+  pricing: https://ftmo.com/
+pricing_url_pending: true
+notes: stub — resolve Help/TOS/pricing paths at runtime; no rule numbers here

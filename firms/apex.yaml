@@ -1,0 +1,12 @@
+id: apex
+display_name: Apex Trader Funding
+product_lines:
+  - futures
+urls:
+  homepage: https://apextraderfunding.com/
+  help: https://apextraderfunding.com/
+  tos: https://apextraderfunding.com/
+  pricing: https://apextraderfunding.com/
+pricing_url_pending: true
+notes: stub — resolve Help/TOS/pricing paths at runtime; no rule numbers here
+homepage_check: failed

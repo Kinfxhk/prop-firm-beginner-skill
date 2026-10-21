@@ -1,0 +1,93 @@
+# FAQ router — ids 01–18 match design draft E
+version: 0
+topics:
+  - id: "01"
+    slug: what-is-prop-firm
+    file: 01-what-is-prop-firm.md
+    pfd_key: what_is_prop_firm
+    title_zh: Prop firm 係咩／同真券商分別
+  - id: "02"
+    slug: challenge-vs-instant
+    file: 02-challenge-vs-instant.md
+    pfd_key: challenge_vs_instant
+    title_zh: Challenge vs Instant funded
+  - id: "03"
+    slug: drawdown-types
+    file: 03-drawdown-types.md
+    pfd_key: drawdown_types
+    title_zh: Drawdown 種類（static／trailing／EOD）
+  - id: "04"
+    slug: daily-loss
+    file: 04-daily-loss.md
+    pfd_key: daily_loss
+    title_zh: Daily loss 點計
+  - id: "05"
+    slug: consistency-min-days
+    file: 05-consistency-min-days.md
+    pfd_key: consistency_min_days
+    title_zh: Consistency／最少交易日
+  - id: "06"
+    slug: activation-fees
+    file: 06-activation-fees.md
+    pfd_key: activation_fees
+    title_zh: 通過後 activation／月費
+  - id: "07"
+    slug: profit-split-payout
+    file: 07-profit-split-payout.md
+    pfd_key: profit_split_payout
+    title_zh: 分潤同首次出金要幾耐
+  - id: "08"
+    slug: payout-methods
+    file: 08-payout-methods.md
+    pfd_key: payout_methods
+    title_zh: 出金方式同地區限制
+  - id: "09"
+    slug: hong-kong-geo
+    file: 09-hong-kong-geo.md
+    pfd_key: hong_kong_geo
+    title_zh: 香港／受限國注意
+  - id: "10"
+    slug: platforms-data-fees
+    file: 10-platforms-data-fees.md
+    pfd_key: platforms_data_fees
+    title_zh: 平台同資料費
+  - id: "11"
+    slug: ea-copy-multi-account
+    file: 11-ea-copy-multi-account.md
+    pfd_key: ea_copy_multi_account
+    title_zh: EA／copy／多帳戶政策
+  - id: "12"
+    slug: news-overnight-weekend
+    file: 12-news-overnight-weekend.md
+    pfd_key: news_overnight_weekend
+    title_zh: 新聞單／隔夜／週末
+  - id: "13"
+    slug: reset-retry
+    file: 13-reset-retry.md
+    pfd_key: reset_retry
+    title_zh: Reset／失敗後重買
+  - id: "14"
+    slug: promo-codes
+    file: 14-promo-codes.md
+    pfd_key: promo_codes
+    title_zh: 優惠碼點核實
+  - id: "15"
+    slug: penalties-hidden-rules
+    file: 15-penalties-hidden-rules.md
+    pfd_key: penalties_hidden_rules
+    title_zh: 常見罰則／隱藏規則點查
+  - id: "16"
+    slug: risk-shutdown-signals
+    file: 16-risk-shutdown-signals.md
+    pfd_key: risk_shutdown_signals
+    title_zh: 點分辨高風險／疑似停運
+  - id: "17"
+    slug: tax-kyc-overview
+    file: 17-tax-kyc-overview.md
+    pfd_key: tax_kyc_overview
+    title_zh: 稅務／KYC 概覽
+  - id: "18"
+    slug: should-i-buy
+    file: 18-should-i-buy.md
+    pfd_key: should_i_buy
+    title_zh: 「我應唔應該買」決策樹

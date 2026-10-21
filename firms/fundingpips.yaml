@@ -1,0 +1,13 @@
+id: fundingpips
+display_name: FundingPips
+product_lines:
+  - cfd
+  - forex
+urls:
+  homepage: https://fundingpips.com/
+  help: https://fundingpips.com/
+  tos: https://fundingpips.com/
+  pricing: https://fundingpips.com/
+pricing_url_pending: true
+notes: stub — resolve Help/TOS/pricing paths at runtime; no rule numbers here
+homepage_check: failed

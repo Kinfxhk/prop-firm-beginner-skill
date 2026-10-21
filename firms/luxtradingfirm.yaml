@@ -1,0 +1,12 @@
+id: luxtradingfirm
+display_name: Lux Trading Firm
+product_lines:
+  - cfd
+  - forex
+urls:
+  homepage: https://luxtradingfirm.com/
+  help: https://luxtradingfirm.com/
+  tos: https://luxtradingfirm.com/
+  pricing: https://luxtradingfirm.com/
+pricing_url_pending: true
+notes: stub — resolve Help/TOS/pricing paths at runtime; no rule numbers here
