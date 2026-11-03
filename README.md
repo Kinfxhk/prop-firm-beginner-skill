@@ -1,5 +1,8 @@
 # prop-firm-beginner-skill
 
+
+**[☕ Buy Me a Coffee](https://buymeacoffee.com/kinfxhk)** · [GitHub Sponsors](https://github.com/sponsors/Kinfxhk)
+
 **本說明以繁體中文為準。** English follows below.
 
 **狀態：V0 腳手架（0.1.8）** — 開源 Agent Skill，協助新手**選擇 prop firm**、以**即時開頁核實**查閱規則、回答 FAQ，並可選擇連至 [Propfirms Drama](https://propfirmsdrama.com/) 閱讀繁中長文。**非投資建議。** 與任何 proprietary trading firm 無隸屬關係。
